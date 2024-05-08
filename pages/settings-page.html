@@ -28,9 +28,9 @@
         </div>
         <div class="col">
           <p class="text-white">Выберите область распыления</p>
-          <div id="map" style="position:relative;overflow:hidden;">
-            <iframe src="https://yandex.ru/map-widget/v1/?ll=39.720349%2C47.222078&z=12" width="500" height="375"
-              frameborder="3" allowfullscreen="false" style="position:relative;"></iframe>
+          <div class="map" style="position:relative;overflow:hidden;">
+            <iframe src="https://yandex.ru/map-widget/v1/?ll=39.720349%2C47.222078&z=12" 
+              frameborder="3" allowfullscreen="false"></iframe>
           </div>
         </div>
         <div class="col">
@@ -52,12 +52,12 @@
               </ul>
             </select>
           </div>
-          <input type="number" class="form-control mt-2" placeholder="Введите объем топлива, в литрах" min="1" required>
-          <p class="list mt-2 text-start">Введите дату и время начала работы дрона:</p>
+          <input type="number" class="form-control mt-3" placeholder="Введите объем топлива, в литрах" min="1" required>
+          <p class="list mt-3 text-start">Введите дату и время начала работы дрона:</p>
           <input type="datetime-local" class="form-control mt-2" placeholder="" required>
           <div class="row">
-            <div class="col mt-2">
-              <div class="dropdown">
+            <div class="col mt-3">
+              <div class="dropup">
                 <select id="fertilizers" name="fertilizers" onchange="handleChange()"
                   class="btn btn-secondary dropdown-toggle" id="defaultDropdown" data-toggle="dropdown"
                   data-bs-auto-close="true" aria-expanded="false">
@@ -76,8 +76,8 @@
                 </select>
               </div>
             </div>
-            <div class="col mt-2">
-              <div class="dropdown">
+            <div class="col mt-3">
+              <div class="dropdown dropup">
                 <select id="cultures" name="cultures" onchange="handleChange()"
                   class="btn btn-secondary dropdown-toggle" id="defaultDropdown" data-toggle="dropdown"
                   data-bs-auto-close="true" aria-expanded="false">
@@ -96,6 +96,9 @@
                 </select>
               </div>
             </div>
+          </div>
+          <div class="d-grid gap-2 col-6 mx-auto mt-3">
+            <button class="btn btn-primary" type="button" onclick="document.location='control-page.html'">Подтвердить</button>
           </div>
         </div>
       </div>

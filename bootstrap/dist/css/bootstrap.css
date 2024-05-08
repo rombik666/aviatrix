@@ -12141,8 +12141,17 @@ a:active {
   color: #898989;
 }
 
-div#map {
-  border-radius: 25px 25px 25px 25px;
+iframe {
+  border-radius: 40px 10px;
+  height: 375px;
+  width: 500px;
+}
+
+@media (max-width: 505px)
+{
+  iframe {
+    border-radius: 0px;
+  }
 }
 
 
