@@ -2118,11 +2118,11 @@ progress {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--bs-body-color);
+  color: #fff;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: var(--bs-body-bg);
+  background-color: #6c757d;
   background-clip: padding-box;
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
@@ -2141,10 +2141,10 @@ progress {
 }
 .form-control:focus {
   color: var(--bs-body-color);
-  background-color: var(--bs-body-bg);
-  border-color: #86b7fe;
+  background-color: #a4b2be;
+  border-color: #1ee038;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 0.25rem green;
 }
 .form-control::-webkit-date-and-time-value {
   min-width: 85px;
@@ -2160,7 +2160,7 @@ progress {
   opacity: 1;
 }
 .form-control::placeholder {
-  color: var(--bs-secondary-color);
+  color: #fff;
   opacity: 1;
 }
 .form-control:disabled {
@@ -3072,7 +3072,7 @@ textarea.form-control-lg {
 .btn-secondary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #6c757d;
-  --bs-btn-border-color: #6c757d;
+  --bs-btn-border-color: #fff;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #5c636a;
   --bs-btn-hover-border-color: #565e64;
@@ -12140,5 +12140,11 @@ a:hover {
 a:active {
   color: #898989;
 }
+
+div#map {
+  border-radius: 25px 25px 25px 25px;
+}
+
+
 
 /*# sourceMappingURL=bootstrap.css.map */

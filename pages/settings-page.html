@@ -1,36 +1,128 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <title>Aviatrix</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <title>Aviatrix</title>
 </head>
-<body class="hide-scrollbar bg-dark"> 
-      <main>
-        <div class="conatiner align-items-center bg-img">
-          <div class="row text-center pt-5">
-            <div class="col">
-                  <h1 class="text-light">AVIATRIX</h1>
-                  <p class="text-light">Настройка и управление дронами</p>
+
+<body class="hide-scrollbar bg-dark">
+  <main>
+    <div class="conatiner align-items-center bg-img">
+      <div class="row text-center pt-5">
+        <div class="col"></div>
+        <div class="col" style="border: 5px solid green;">
+
+            <h1 class="text-light"><a href="../index.html">AVIATRIX</a></h1>
+          
+          <p class="text-light">Настройка и управление дронами</p>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row text-center ms-2 me-2">
+        <div class="col">
+          <p class="text-white">Погодные условия</p>
+          <div class="elfsight-app-64a0a4d3-9d33-4944-b079-fe0a17cf5c7a" data-elfsight-app-lazy></div>
+        </div>
+        <div class="col">
+          <p class="text-white">Выберите область распыления</p>
+          <div id="map" style="position:relative;overflow:hidden;">
+            <iframe src="https://yandex.ru/map-widget/v1/?ll=39.720349%2C47.222078&z=12" width="500" height="375"
+              frameborder="3" allowfullscreen="false" style="position:relative;"></iframe>
+          </div>
+        </div>
+        <div class="col">
+          <p class="text-white">Заполните следующие поля для продолжения работы</p>
+          <div class="dropdown">
+            <select id="drons" name="drons" onchange="handleChange()" class="btn btn-secondary dropdown-toggle"
+              id="defaultDropdown" data-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+              <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                <option selected>Выберите модель вашего дрона...</option>
+                <option value="dron1">
+                  <li><a class="dropdown-item" href="#">dron1</a></li>
+                </option>
+                <option value="dron2">
+                  <li><a class="dropdown-item" href="#">Menu</a></li>
+                </option>
+                <option value="dron3">
+                  <li><a class="dropdown-item" href="#">Menu</a></li>
+                </option>
+              </ul>
+            </select>
+          </div>
+          <input type="number" class="form-control mt-2" placeholder="Введите объем топлива, в литрах" min="1" required>
+          <p class="list mt-2 text-start">Введите дату и время начала работы дрона:</p>
+          <input type="datetime-local" class="form-control mt-2" placeholder="" required>
+          <div class="row">
+            <div class="col mt-2">
+              <div class="dropdown">
+                <select id="fertilizers" name="fertilizers" onchange="handleChange()"
+                  class="btn btn-secondary dropdown-toggle" id="defaultDropdown" data-toggle="dropdown"
+                  data-bs-auto-close="true" aria-expanded="false">
+                  <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                    <option selected>Тип удобрения</option>
+                    <option value="pesticides">
+                      <li><a class="dropdown-item" href="#">Пестициды</a></li>
+                    </option>
+                    <option value="liquidFert">
+                      <li><a class="dropdown-item" href="#">Жид. удобрения</a></li>
+                    </option>
+                    <option value="midFrozFert">
+                      <li><a class="dropdown-item" href="#">Сред. замерз</a></li>
+                    </option>
+                  </ul>
+                </select>
+              </div>
+            </div>
+            <div class="col mt-2">
+              <div class="dropdown">
+                <select id="cultures" name="cultures" onchange="handleChange()"
+                  class="btn btn-secondary dropdown-toggle" id="defaultDropdown" data-toggle="dropdown"
+                  data-bs-auto-close="true" aria-expanded="false">
+                  <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                    <option selected>Тип культуры</option>
+                    <option value="watermelon">
+                      <li><a class="dropdown-item" href="#">Арбуз</a></li>
+                    </option>
+                    <option value="melon">
+                      <li><a class="dropdown-item" href="#">Дыня</a></li>
+                    </option>
+                    <option value="pumpkin">
+                      <li><a class="dropdown-item" href="#">Тыква</a></li>
+                    </option>
+                  </ul>
+                </select>
+              </div>
             </div>
           </div>
-          <div class="row">
-            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-            <div class="elfsight-app-64a0a4d3-9d33-4944-b079-fe0a17cf5c7a" data-elfsight-app-lazy></div>
-          </div>
-        </div>
-    </main>
-    <footer class="bg-dark text-white">
-      <div class="row pt-1 pb-1 ms-1">
-        <div class="col">
-          AVIATRIX®
-        </div>
-        <div class="col feedback">
-          <a href="https://t.me/qrize1" title="Feedback"><img src="../img/icons/tg.png" alt="Telegramm"><span> Telegramm</span></a>
         </div>
       </div>
-    </footer>
-    <script src="bootstrap/dist/js/bootstrap.js"></script>
+      </div>
+  </main>
+  <footer class="bg-dark text-white">
+    <div class="row pt-1 pb-1 ms-1">
+      <div class="col">
+        AVIATRIX®
+      </div>
+      <div class="col feedback">
+        <a href="https://t.me/qrize1" title="Feedback"><img src="../img/icons/tg.png" alt="Telegramm"><span>
+            Telegramm</span></a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="../bootstrap/dist/js/bootstrap.js"></script>
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 </body>
+
 </html>

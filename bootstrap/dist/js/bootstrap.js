@@ -4252,7 +4252,12 @@
         data[config]();
       });
     }
+
+   handleChange() {
+    const selectElement = document.getElementById('drons');
+    const selectedDron = selectElement.value;
   }
+
 
   /**
    * Data API implementation
